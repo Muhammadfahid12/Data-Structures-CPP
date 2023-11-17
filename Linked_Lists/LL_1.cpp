@@ -83,6 +83,34 @@ public:
 
     //insertion in Linked_list
 
+    void insert(void *data,int index = -1)
+    {
+
+        if (index == 0)
+        {
+        Node* newNode = this->head;
+
+        this->head->next = newNode;
+
+        newNode->prev = head;
+
+        newNode->data = data;
+
+        this->listSize = +1;
+
+        }
+        // else if (index == -1)
+        // {
+        //     Node * newNode = head;
+        //     head
+        //     newNode->data = data;
+        //     newNode->next = NULL;
+        //     newNode->prev = head;
+        // }
+        
+
+    }
+
 };
 
 int main()
@@ -95,7 +123,9 @@ int main()
 
     DoublyList newList(&x);
 
-    // cout << "size: "<<newList.size();
+    newList.insert(&z,0);
+
+    cout << "size: "<<newList.size() << endl;
     int *ptr = (int *)newList.read(); // to assign a data_type to void function we use this type casting
     cout <<*ptr; // dereferncing pointer to get stored value
 }
