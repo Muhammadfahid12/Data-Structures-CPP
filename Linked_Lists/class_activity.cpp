@@ -182,10 +182,13 @@ int main() {
 
     myList.insert(&z, 0);
 
-    for (int  i = 0; i <= myList.size(); i++)
-    {
-        cout << "Int " << *((int*)myList.read(i)) << endl;
-    }
+    // for (int  i = 0; i <= myList.size(); i++)
+    // {
+        cout << "Int " << *((int*)myList.read(0)) << endl;
+        cout << "Int " << *((int*)myList.read(1)) << endl;
+        cout << "Int " << *((int*)myList.read(2)) << endl;
+    // }
+    
     
 
     cout << "Size: " << myList.size() << endl;
